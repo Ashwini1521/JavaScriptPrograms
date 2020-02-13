@@ -1,3 +1,20 @@
+
+
+/******************************************************************************
+	 *  Execution       :   1. default node         cmd> node binaryMain.js
+	 *                      2. if nodemon installed cmd> nodemon binaryMain.js
+	 *
+	 *  Purpose         : BinarySearch.
+	 *
+	 *  @description    : Searching for a string key in a string array and displaying key if key is found in array then it return true  else key is not found in the given array it return false...
+	 *
+	 *  @file           : binaryMain.js
+	 *  @overview       : find the string key i given array. 
+	 *  @module         : module_name - This is optional if expeclictly its an npm or local package
+	 *  @author         : Ashwini M <ashwiniswamy1521@gmail.com>
+	 *  @version        : 1.0
+	 *  @since          : 13-02-2020
+	 ******************************************************************************/
 let readline = require('readline-sync');
 let callFunction = require('./binaryBL');
 try {
