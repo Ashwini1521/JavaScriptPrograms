@@ -4,7 +4,7 @@
 	 *
 	 *  Purpose         : to find harmonic number.
 	 *
-	 *  @description    : taking input from user and applying it into the given formula to find the harmonic number...
+	 *  @description    : taking the input from user and applying it into the given formula to find the harmonic number...
 	 *
 	 *  @file           : harmonicMain.js
 	 *  @overview       : find the harmonic number from  given input. 
