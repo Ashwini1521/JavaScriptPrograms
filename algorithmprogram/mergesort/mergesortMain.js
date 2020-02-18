@@ -7,7 +7,7 @@
 	 *  @description    : taking the array elements from user and sorting those array elements using mergesort...
 	 *
 	 *  @file           : mergesortMain.js
-	 *  @overview       : find the harmonic number from  given input. 
+	 *  @overview       : find the sorted array using mergesort. 
 	 *  @module         : module_name - This is optional if expeclictly its an npm or local package
 	 *  @author         : Ashwini M <ashwiniswamy1521@gmail.com>
 	 *  @version        : 1.0
