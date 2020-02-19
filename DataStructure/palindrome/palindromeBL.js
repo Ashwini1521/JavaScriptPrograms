@@ -17,6 +17,7 @@ class Dequeue {
             return true;
         }
         node.next = this.head;
+
         this.head.prev = node;
         this.head = node;
         return true;
