@@ -6,6 +6,7 @@ let deque = new access.Dequeue();
 for (let i = length - 1; i >= 0; i--) {
     deque.addFirst(str.charAt(i));
 }
+//sdasdsad
 let reverse = "";
 for (let i = 0; i < length; i++) {
     let ch = deque.removeLast();
