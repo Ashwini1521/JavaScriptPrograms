@@ -94,7 +94,8 @@ module.exports = {
         const fs = require('fs');
         var file = fs.readFileSync("unordered.txt", 'utf-8');
         var a = file.split(" ");
-        return a;
+        b = a.sort();
+        return b;
     },
     revertfile:(res_file) => {
         const fs = require('fs');
