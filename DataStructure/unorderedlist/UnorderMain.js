@@ -15,6 +15,7 @@
 	 *  @since          : 20-02-2020
 	 ******************************************************************************/
 const readline = require('readline-sync');
+
 const callFunction = require('./UnorderBL');
 try {
     var ll = new callFunction.linkedlist();
@@ -27,9 +28,9 @@ try {
     console.log(search);
     console.log(ll.printlist());
 
-    let r_file=ll.printlist();
-    let res_file=callFunction.revertfile(r_file);
-     console.log(res_file);
+    let r_file = ll.printlist();
+    let res_file = callFunction.revertfile(r_file);
+    console.log(res_file);
 
 
 } catch (err) {

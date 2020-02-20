@@ -10,7 +10,7 @@ class Dequeue {
         this.head = null;
         this.tail = null;
     }
-    addFirst(obj) {  //it will insert the value at the first in the dqueue.
+    addFirst(obj) {  //it will insert the value at the first in the dqueue done
         let node = new Node(obj);
         if (this.head == null) {
             this.head = node;
