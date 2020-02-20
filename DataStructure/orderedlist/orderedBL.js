@@ -33,31 +33,31 @@ class linkedlist {
         }
     }
 
-    // addorder(element) {
-    //     var node = new_node(element);
-    //     var current = this.head;
-    //     if ((this.head == null) || (this.head.element >= node.element)) {
-    //         node.next = this.head;
-    //         this.head = node;
-    //     }
-    //     else {
-    //         var current = this.head;
-    //         var prev = null;
-    //         while (current != null) {
-    //             if (current.element > element) {
-    //                 break;
-    //             }
-    //             else if (current.element < element) {
-    //                 prev = current;
-    //                 current = current.next;
-    //             }
-    //         }
+    addorder(element) {
+        var node = new_node(element);
+        var current = this.head;
+        if ((this.head == null) || (this.head.element >= node.element)) {
+            node.next = this.head;
+            this.head = node;
+        }
+        else {
+            var current = this.head;
+            var prev = null;
+            while (current != null) {
+                if (current.element > element) {
+                    break;
+                }
+                else if (current.element < element) {
+                    prev = current;
+                    current = current.next;
+                }
+            }
 
-    //         node.next = current;
-    //         prev.next = node;
-    //     }
-    //     this.size++;
-    // }
+            node.next = current;
+            prev.next = node;
+        }
+        this.size++;
+    }
 
     deletedata(element) {
         var current = this.head;
@@ -115,14 +115,14 @@ module.exports = {
     linkedlist, Node,
     myfile: () => {
         const fs = require('fs');
-        var file = fs.readFileSync("Unordered.txt", 'utf-8');
+        var file = fs.readFileSync("ordered.txt", 'utf-8');
         var a = file.split(" ");
         b = a.sort();
         return b;
     },
     revertfile: (res_file) => {
         const fs = require('fs');
-        fs.writeFileSync('Unordered.txt', res_file, { encoding: 'utf-8', flag: 'w' });
+        fs.writeFileSync('ordered.txt', res_file, { encoding: 'utf-8', flag: 'w' });
 
     }
 }

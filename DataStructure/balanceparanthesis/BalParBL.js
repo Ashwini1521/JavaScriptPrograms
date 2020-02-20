@@ -1,5 +1,5 @@
 var size = 100;
-
+// class module
 class stack {
     constructor() {
         this.a = [];
