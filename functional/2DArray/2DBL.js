@@ -5,10 +5,7 @@ let row = 2;
 let column = 2;
 
 module.exports = {
-
-    /**
-     * Take Integer Value From User only.
-     */
+     //Take Integer Value From User only.
     readIntArr:  () => {
         let arr = [[], []];
         for (let i = 0; i < row; i++) {
@@ -19,11 +16,8 @@ module.exports = {
         return arr;
     },
 
-    /**
-     * Print Integer Array.
-     * @param {Array} arr - it take array as integer.
-     * @return {Integer Array} array.
-     */
+     //Print Integer Array.
+     // it take array as integer.
     printIntArr: (arr) => {
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < column; j++) {
@@ -33,9 +27,7 @@ module.exports = {
         }
     },
 
-    /**
-     * Take Float Value From User only.
-     */
+    //Take Float Value From User only.
     readFloatArr: () => {
         let arr = [[], []];
         for (let i = 0; i < row; i++) {
@@ -46,11 +38,8 @@ module.exports = {
         return arr;
     },
 
-    /**
-     * Print Integer Array.
-     * @param {Array} arr - it take array as Float Value.
-     * @return {Float Array} array.
-     */
+    //Print Integer Array.
+    // it take array as Float Value.
     printFloatArr: (arr) => {
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < column; j++) {
@@ -60,9 +49,7 @@ module.exports = {
         }
     },
 
-    /**
-     * Take Boolean Value From User only.
-     */
+    //Take Boolean Value From User only.
     readBoolArr: () => {
         let arr = [[], []];
         var regex = new Regex('(true|false)');
@@ -79,11 +66,8 @@ module.exports = {
         return arr;
     },
 
-    /**
-     * Print Integer Array.
-     * @param {Array} arr - it take array as Boolean value.
-     * @return {Boolean Array} array.
-     */
+    //Print Integer Array.
+    //it take array as Boolean value.
     printBoolArr: (arr) => {
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < column; j++) {
