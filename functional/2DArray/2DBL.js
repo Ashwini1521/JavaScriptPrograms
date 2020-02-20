@@ -1,4 +1,3 @@
-
 const readLine = require('readline-sync');
 let Regex = require('regex');
 let row = 2;
@@ -65,7 +64,6 @@ module.exports = {
         }
         return arr;
     },
-
     //Print Integer Array.
     //it take array as Boolean value.
     printBoolArr: (arr) => {
