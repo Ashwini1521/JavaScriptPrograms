@@ -1,9 +1,10 @@
-const pr2aLib = require('./2DprimeBL');
+let read = require('readline-sync');
+const callFunction = require('./2DprimeBL');
 try{
     let b = 100;
     let main = () => {
-        pr2aLib.primeNumbers(1000);
-        let res = pr2aLib.resultArr;
+        callFunction.primeNumbers(1000);
+        let res = callFunction.resultArr;
         // console.log(res);
         for(let a in res){
             console.log(`${b-100} to ${b} => ${res[a]}`);//backtic
