@@ -13,10 +13,11 @@
 	 *  @version        : v12.16.1
 	 *  @since          : 21-02-2020
 	 ******************************************************************************/
-const BstLib = require('./binaryBL');
+const read = require('readline-sync');
+const callFunction = require('./binaryBL');
 try {
     let main = () => {
-        let BST = new BstLib.binarySearchTree();
+        let BST = new callFunction.binarySearchTree();
         BST.insert(7);
         BST.insert(2);
         BST.insert(9);
