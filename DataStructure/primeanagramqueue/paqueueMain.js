@@ -13,17 +13,12 @@
 	 *  @version        : v12.16.1
 	 *  @since          : 21-02-2020
 	 ******************************************************************************/
-const readline = require('readline-sync');
-const callFunction = require('./paqueueBL');
-
+const callfunction = require('./paqueueBL')
 try {
-    const range = readline.question('enter the range of number ');
-    let resultantAnagramNumbers = callFunction.primeNumbersGenerator(range);
-    const q = new callFunction.Queue();
-    for (let i = resultantAnagramNumbers.length - 1; i >= 0; i--) {
-        q.enqueue(resultantAnagramNumbers[i]);
+    let queue = callfunction.getAnagram();
+    while (!queue.isEmpty()) {
+        console.log(queue.dequeue());
     }
-    q.printQueue();
 }
 catch (err) {
     console.log(err);
