@@ -1,79 +1,107 @@
 class Node {
-    constructor(value,next=null) {
-        this.value=value;
-        this.next=next;
+    // constructor 
+    constructor(value) {
+        this.value = value;
+        this.next = null;
     }
 }
-class linkedlist {
-    constructor(){
-        this.head=null;
-        this.size=0;
+// Queue class 
+class Queue {
+    constructor() {
+        this.size = 0;
+        this.head = null;
     }
 
-Push(value) {
-    this.head=new Node(value,this.head);
-    this.size++;
-}
-Printlist(){
-    let currentnode = this.head;
-    while(currentnode){
-        Console.log(currentnode.value);
-        currentnode=currentnode.next;
-    }
-}
-
-}
-
-
-
-//let pnumbers = [];
-
-primeNumbersGenerator = (n) => {
-    pnumbers = checkPrimeNumber(n);
-    
-    let tempPNumbers = pnumbers.map((ele) => {
-        return ele.toString();
-    });
-    let anagramArr = [];
-    for (let i = 0; i < tempPNumbers.length; i++) {
-        for (let j = i + 1; j < tempPNumbers.length; j++) {
-            if (checkAnagram(tempPNumbers[i], tempPNumbers[j])) {
-                anagramArr.push(tempPNumbers[i], tempPNumbers[j]);
+    enqueue(value) {  //to enqueue the value into queue
+        try {
+            let node = new Node(value);
+            if (this.head == null) {
+                this.head = node;
             }
-        }
-    }
-    return anagramArr;
-},
-
-checkPrimeNumber=(n) => {
-    let arr = [];
-    for (let i = 2; i < n; i++) {
-        let count = 0;
-        for (let j = 2; j < i; j++) {
-            if (i % j == 0) {
-                count++;
+            else {
+                let current = this.head;
+                while (current.next) {
+                    current = current.next;
+                }
+                current.next = node;
             }
+            this.size++;
         }
-        if (!(count > 0))
-            arr.push(i);
-    }
-    return arr;
-},
-checkAnagram = (number1, number2) => {
-    if (number1.length == number2.length) {
-        number1 = number1.split('').sort((a, b) => { return a - b }).join();
-        number2 = number2.split('').sort((a, b) => { return a - b }).join();
-        if (number1 == number2) {
-            return true
-        } else {
-            return false;
+        catch (err) {
+            console.log(err);
         }
-    } else {
-        return false;
     }
 
+
+    dequeue() { //top element in the queue
+        try {
+            let value;
+            value = this.head.value;
+            this.head = this.head.next;
+            this.size--;
+            return value;
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    isEmpty() {  //satck is empty or not
+        return this.size == 0;
+    }
+}
+
+
+getPrimeNum = () => { //prime number between 0-1000 in a array
+    let primeNumbers = [];
+    for (let i = 2; i < 1000; i++) {
+        if (isPrime(i)) {
+            primeNumbers.push(i);
+        }
+    }
+    return primeNumbers;
+}
+
+
+isPrime = (number) => { //to check it is a prime number or not
+
+    try {
+        let i = 2;
+        while (i <= number / 2) {
+            if (number % i == 0)
+                return false;
+            i++
+        }
+        return true;
+    }
+    catch (err) {
+        console.log(err);
+    }
 }
 
 module.exports = {
-    //Node, Queue, checkAnagram, checkPrimeNumber, primeNumbersGenerator
+    //enqueue all the prime anagram number to the queue
+    getAnagram: () => {
+        try {
+            let prime = getPrimeNum();
+            let queue = new Queue();
+
+            for (let i = 0; i < prime.length; i++) {
+                let ele1 = (prime[i] + "").split("").sort().toString();
+                for (let j = 0; j < prime.length; j++) {
+                    let ele2 = (prime[j] + "").split("").sort().toString();
+                    if (i != j && ele1 == ele2) {
+
+                        queue.enqueue(prime[i]);
+
+                        break;
+                    }
+                }
+            }
+            return queue;
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
 }
