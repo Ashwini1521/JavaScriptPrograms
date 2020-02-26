@@ -1,5 +1,5 @@
 module.exports = {
-    Leap: (year) => {
+    isLeap: (year) => {
         if (year % 4 == 0) {
             return true;
         }
