@@ -1,0 +1,24 @@
+{
+    "person":[
+                {
+                    "id":1,
+                    "fname":"Ashwini",
+                    "lname":"Matt",
+                    "address":"10 Main th cross",
+                    "city":"Banglore",
+                    "state":"karnataka",
+                    "zip":560040,
+                    "pnumber":9535058945
+                },
+                {
+                    "id":2,
+                    "fname":"kiran",
+                    "lname":"mayi",
+                    "address":"alwal",
+                    "city":"hyderabad",
+                    "state":"telangana",
+                    "zip":500010,
+                    "pnumber":7855963534
+                }
+            ]
+}
