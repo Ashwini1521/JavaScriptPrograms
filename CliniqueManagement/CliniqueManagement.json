@@ -1,0 +1,46 @@
+
+{
+    "doctors": [
+        {
+            "id": 1,
+            "name": "Rahul",
+            "specialization": "Born",
+            "availability": "9AM to 12PM"
+        },
+        {
+            "id": 2,
+            "name": "Sahil",
+            "specialization": "All Rounder",
+            "availability": "6AM to 6PM"
+        }
+    ],
+    "patients": [
+        {
+            "id": 11,
+            "docterId": 1,
+            "name": "Ashwini",
+            "appointmentFrom": "Rahul",
+            "phone": 7725964135,
+            "age": 22,
+            "onTheDayOf": 20
+        },
+        {
+            "id": 12,
+            "docterId": 2,
+            "name": "Suresh",
+            "appointmentFrom": "Sahil",
+            "phone": 7412589631,
+            "age": 23,
+            "onTheDayOf": 30
+        },
+        {
+            "id": 13,
+            "docterId": 1,
+            "name": "Pramod",
+            "appointmentFrom": "Rahul",
+            "phone": 9512368745,
+            "age": 24,
+            "onTheDayOf": 12
+        }
+    ]   
+}
