@@ -1,0 +1,19 @@
+{
+    "stock": [
+        {
+            "name": "gvs",
+            "NoOfstock": 675,
+            "price": 74
+        },
+        {
+            "name": "aaa",
+            "NoOfstock": 12,
+            "price": 124
+        },
+        {
+            "name": "abc",
+            "NoOfstock": 5,
+            "price": 567
+        }
+    ]
+}
