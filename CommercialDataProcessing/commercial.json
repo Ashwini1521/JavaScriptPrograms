@@ -1,0 +1,42 @@
+{
+    "customer": [
+        {
+            "name": "Ashwini",
+            "password": "9769",
+            "stock": [
+                {
+                    "name": "asd",
+                    "number": 675,
+                    "price": 865
+                }
+            ]
+        },
+        {
+            "name": "kiran",
+            "password": "6969",
+            "stock": [
+                {
+                    "name": "mfg",
+                    "number": 3,
+                    "price": 2515
+                },
+                {
+                    "name": "mtr",
+                    "number": 54,
+                    "price": 2750
+                }
+            ]
+        },
+        {
+            "name": "gowri",
+            "password": "1986",
+            "stock": [
+                {
+                    "name": "atob",
+                    "number": 25,
+                    "price": 98761
+                }
+            ]
+        }
+    ]
+}
