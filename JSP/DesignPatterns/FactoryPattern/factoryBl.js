@@ -1,3 +1,6 @@
+/**
+ * @class Professor
+ */
 class Professor {
     constructor(name) {
         this.name = name;
@@ -5,6 +8,9 @@ class Professor {
     }
 
 }
+/**
+ * @class Student
+ */
 class Student {
     constructor(name) {
         this.name = name;
@@ -12,6 +18,10 @@ class Student {
     }
 
 }
+/**
+ * @function collegefactory
+ * @return - create a instance of Professor or Student and return it
+ */
 function collegefactory() {
     this.create = (name, type) => {
         switch (type) {
@@ -24,6 +34,9 @@ function collegefactory() {
         }
     }
 }
+/**
+ * @module factotyBl 
+ */
 module.exports = {
     collegefactory
 }
