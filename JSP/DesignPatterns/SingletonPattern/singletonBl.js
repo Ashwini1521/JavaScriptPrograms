@@ -1,6 +1,8 @@
 
 let instance;
-
+/**
+ * @class Singleton
+ */
 class Singleton {
     constructor() {
         console.log("I am a instance");
@@ -8,7 +10,9 @@ class Singleton {
     }
 
 }
-
+/**
+ * @module getInstance 
+ */
 module.exports = {
     getInstance: () => {
         if (instance == null)
