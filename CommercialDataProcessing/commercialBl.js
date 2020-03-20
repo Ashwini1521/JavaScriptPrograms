@@ -1,6 +1,9 @@
 const fs = require('fs');
-const read=require('readline-sync');
-class customer {
+const read = require('readline-sync');
+/**
+* @class Customer
+*/
+class Customer {
     constructor(name, password, stock) {
         this.name = name;
         this.password = password;
@@ -8,6 +11,9 @@ class customer {
     }
 
 }
+/**
+* @class Stock
+*/
 class Stock {
     constructor(name, number, price) {
         this.name = name;
@@ -15,12 +21,18 @@ class Stock {
         this.price = price;
     }
 }
+/**
+* @class CommercialManagement
+*/
 class CommercialManagement {
     constructor() {
         let JSONData = fs.readFileSync('commercial.json');
         this.CommercialManagement = JSON.parse(JSONData);
 
     }
+    /**
+    * It creates the account for commercialManagement. 
+    */
     createAccount() {
         let custName = readLine.question('Enter Account Holder Name : ');
         let password = readLine.question('Enter The password : ');
@@ -32,6 +44,9 @@ class CommercialManagement {
         this.CommercialManagement.customer.push(JSON.parse(JSON.stringify(Customer)));
         fs.writeFileSync('commercial.json', JSON.stringify(this.CommercialManagement));
     }
+    /**
+    * It checks whether the account is available or not. 
+    */
     checkAccount(name, password) {
         let position = -1;
         for (let i in this.CommercialManagement.customer) {
@@ -41,6 +56,9 @@ class CommercialManagement {
         }
         return position;
     }
+    /**
+    * It will buystock and add  it into the json file. 
+    */
     buystock(index) {
         console.log(`Welcome ${this.CommercialManagement.customer[index].name}`);
         let name = read.question('Enter the name of Stock : ');
@@ -50,6 +68,9 @@ class CommercialManagement {
         this.CommercialManagement.customer[index].stock.push(JSON.parse(JSON.stringify(newStock)));
         fs.writeFileSync('commercial.json', JSON.stringify(this.CommercialManagement));
     }
+    /**
+    * It will sellstock and removes existing stock (after selling it) from json file. 
+    */
     sellstock(index) {
         console.log('______Available Stocks______');
         for (let ind in this.CommercialManagement.customer[index].stock) {
@@ -63,6 +84,9 @@ class CommercialManagement {
         }
         fs.writeFileSync('commercial.json', JSON.stringify(this.CommercialManagement));
     }
+    /**
+    * It will print the commercial.json file. 
+    */
     printReport(index) {
         console.log(`Stock report of ${this.CommercialManagement.customer[index].name}`);
         for (let ind in this.CommercialManagement.customer[index].stock) {
@@ -70,6 +94,9 @@ class CommercialManagement {
         }
     }
 }
+/**
+* @module commercialBL
+*/
 module.exports = {
     CommercialManagement
 }
