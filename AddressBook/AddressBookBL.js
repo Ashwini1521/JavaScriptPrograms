@@ -49,8 +49,8 @@ class AddressbookMethods extends Person {
         console.log(deleteMessage);
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
     }
-    editentry = () => {
-        let editId = require.questionInt("enter id for the edit");
+    editentry = (editId) => {
+        var editId = read.questionInt("enter id for the edit");
         let isAvailable = false;
         for (let i = 0; i < this.addressbook.person.length; i++) {
             if (this.addressbook.person[i].id == editId) {
@@ -65,7 +65,7 @@ class AddressbookMethods extends Person {
                 isAvailable = true;
             }
             let editMessage = isAvailable ? 'Record edited Successfully' : 'Record not found';
-            console.log(editMessage);
+            //console.log(editMessage);
             fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
         }
 
@@ -100,13 +100,7 @@ class AddressbookMethods extends Person {
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
     }
 }
-// class addressbook extends AddressbookMethods {
-//     constructor() {
-//         super()
-//         let data = fs.readFileSync('AddressBook.json');
-//         this.addressbook = JSON.parse(data);
-//     }
-// }
+
 
 module.exports = {
     AddressbookMethods
