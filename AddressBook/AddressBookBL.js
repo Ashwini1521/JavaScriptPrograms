@@ -1,6 +1,8 @@
 const read = require('readline-sync');
 const fs = require('fs');
-
+/**
+* @class Person
+*/
 class Person {
     constructor(name, id, address, phoneNumber, city, pincode, state) {
         this.name = name;
@@ -12,13 +14,18 @@ class Person {
         this.state = state;
     }
 }
-
+/**
+* @class Person
+*/
 class AddressbookMethods extends Person {
     constructor(name, id, address, phoneNumber, city, pincode, state) {
         super(name, id, address, phoneNumber, city, pincode, state);
         let data = fs.readFileSync('AddressBook.json');
         this.addressbook = JSON.parse(data);
     }
+    /**
+    * It adds entry of data of AddressBook.json file. 
+    */
     addEntry = () => {
         const name = read.question("enter name: ");
         const id = read.questionInt("enter id: ");
@@ -32,6 +39,9 @@ class AddressbookMethods extends Person {
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
 
     }
+    /**
+    * It deletes the entry by id of data of AddressBook.json file. 
+    */
     set deleteEntry(deleteId) {
         let isAvailable = true;
         for (let i = 0; i < this.addressbook.person.length; i++) {
@@ -49,6 +59,9 @@ class AddressbookMethods extends Person {
         console.log(deleteMessage);
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
     }
+    /**
+    * It edits the address,city,pincode,phonenumber data of AddressBook.json file. 
+    */
     editentry = (editId) => {
         var editId = read.questionInt("enter id for the edit");
         let isAvailable = false;
@@ -65,14 +78,19 @@ class AddressbookMethods extends Person {
                 isAvailable = true;
             }
             let editMessage = isAvailable ? 'Record edited Successfully' : 'Record not found';
-            //console.log(editMessage);
             fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
         }
 
     }
+    /**
+    * It prints the data of AddressBook.json file. 
+    */
     get printEntries() {
         console.log(this.addressbook.person);
     }
+    /**
+    * it will sort the data by Name and update JSON file. 
+    */
     SortByName = () => {
         for (let i = 0; i < this.addressbook.person.length; i++) {
             for (let j = 0; j < this.addressbook.person.length - 1; j++) {
@@ -86,6 +104,9 @@ class AddressbookMethods extends Person {
         console.log("Data Sorted Successfully by name");
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
     }
+    /**
+    * it will sort the data by pinCode and update JSON file. 
+    */
     SortBypincode = () => {
         for (let i = 0; i < this.addressbook.person.length; i++) {
             for (let j = 0; j < this.addressbook.person.length - 1; j++) {
@@ -100,8 +121,9 @@ class AddressbookMethods extends Person {
         fs.writeFileSync('AddressBook.json', JSON.stringify(this.addressbook));
     }
 }
-
-
+/**
+* @module AddressBookBL
+*/
 module.exports = {
     AddressbookMethods
 }
