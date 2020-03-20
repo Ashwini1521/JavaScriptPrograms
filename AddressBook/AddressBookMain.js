@@ -1,3 +1,18 @@
+/******************************************************************************
+	 *  Execution       :   1. default node         cmd> node AddressBookMain.js
+	 *                      2. if nodemon installed cmd> nodemon AddressBookMain.js
+	 *
+	 *  Purpose         : to create addressbook.
+	 *
+	 *  @description    : to create addressbook using oops concept...
+	 *
+	 *  @file           : AddressBookMain.js
+	 *  @overview       : addressbook. 
+	 *  @module         : module_name - This is optional if expeclictly its an npm or local package
+	 *  @author         : Ashwini M <ashwiniswamy1521@gmail.com>
+	 *  @version        : 6.13.4
+	 *  @since          : 20-03-2020
+	 ******************************************************************************/
 const read = require('readline-sync');
 const callfunction = require('./AddressBookBL');
 try {
