@@ -1,42 +1,41 @@
-const addBookLib = require('./AddressBookBL');
-const readLine = require('readline-sync');
-try{
-    let main = () => {
-        let AB = new addBookLib.AddressBook();
-            while(true){
-                console.log('1 = For Add Entry.');
-                console.log('2 = For Delete Entry.');
-                console.log('3 = For Edit Entry.');
-                console.log('4 = For Print Entries.');
-                console.log('5 = For Sort By Name.');
-                console.log('6 = For Sort By Zip.');
-                console.log('7 = For EXIT.');
-                let choice = readLine.questionInt('Enter Your Choice : ');
-                switch(choice){
-                    case 1:
-                        AB.addEntry();
-                        break;
-                    case 2:
-                        AB.deleteEntry();
-                        break;
-                    case 3:
-                        AB.editEntry();
-                        break;
-                    case 4:
-                        AB.printBookData();
-                        break;
-                    case 5:
-                        AB.sortByName();
-                        break;
-                    case 6:
-                        AB.sortByZip();
-                        break;
-                    case 7:
-                        process.exit(0);
-                }
-            }
+const read = require('readline-sync');
+const callfunction = require('./addressbookBl');
+try {
+    let addressbook = new callfunction.addressbook();
+    while (true) {
+        console.log('1: For Add entry');
+        console.log('2: For Delete Entry');
+        console.log('3: For edit entry');
+        console.log('4: for print Entries');
+        console.log('5: For sort by name');
+        console.log('6: For Sort By pincode');
+        console.log('7: For EXIT');
+        let choice = read.questionInt('Enter Your choice: ');
+        switch (choice) {
+            case 1:
+                addressbook.addEntry();
+                break;
+            case 2:
+                let deleteId = read.questionInt('Enter The Id to delete : ');
+                addressbook.deleteEntry = deleteId;
+                break;
+            case 3:
+                addressbook.editentry();
+                break;
+            case 4:
+                addressbook.printEntries;
+                break;
+            case 5:
+                addressbook.SortByName();
+                break;
+            case 6:
+                addressbook.SortBypincode();
+                break;
+            case 7:
+                process.exit(0);
+                break;
         }
-    main();
-}catch(err){
-    throw err
+    }
+} catch (error) {
+    throw error;
 }
