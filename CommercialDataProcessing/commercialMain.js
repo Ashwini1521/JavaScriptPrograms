@@ -1,3 +1,18 @@
+/******************************************************************************
+	 *  Execution       :   1. default node         cmd> node commercialMain.js
+	 *                      2. if nodemon installed cmd> nodemon commercialMain.js
+	 *
+	 *  Purpose         : to create CommercialManagement.
+	 *
+	 *  @description    : to create CommercialManagement using oops concept...
+	 *
+	 *  @file           : commercialMain.js
+	 *  @overview       : CommercialManagement. 
+	 *  @module         : module_name - This is optional if expeclictly its an npm or local package
+	 *  @author         : Ashwini M <ashwiniswamy1521@gmail.com>
+	 *  @version        : 6.13.4
+	 *  @since          : 20-03-2020
+	 ******************************************************************************/
 const read = require('readline-sync');
 const fs = require('fs');
 const callfunction = require('./commercialBl');
