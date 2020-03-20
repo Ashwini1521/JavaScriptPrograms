@@ -1,7 +1,9 @@
 const fs = require('fs');
 const read = require('readline-sync');
-
-class stock {
+/**
+* @module Stock
+*/
+class Stock {
     constructor(name, NoOfstock, price) {
         this.name = name;
         this.NoOfstock = NoOfstock;
@@ -9,11 +11,17 @@ class stock {
     }
 
 }
+/**
+* @class StockAccountManagement
+*/
 class StockAccountManagement {
     constructor() {
         let jsondata = fs.readFileSync('stockaccount.json');
         this.stockData = JSON.parse(jsondata);
     }
+    /**
+    * It adds stock to the json file. 
+    */
     addStock() {
         try {
             let name = read.question('enter the name of the stock: ');
@@ -28,6 +36,9 @@ class StockAccountManagement {
         }
 
     }
+    /**
+    * It will prints the stockaccount.json file. 
+    */
     getStockReport() {
         try {
             
@@ -41,6 +52,9 @@ class StockAccountManagement {
         }
     }
 }
+/**
+* @module StockAccountManagement
+*/
 module.exports = {
     StockAccountManagement
 }
