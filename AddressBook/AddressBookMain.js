@@ -1,7 +1,7 @@
 const read = require('readline-sync');
-const callfunction = require('./addressbookBl');
+const callfunction = require('./AddressBookBL');
 try {
-    let addressbook = new callfunction.addressbook();
+    let addressbook = new callfunction.AddressbookMethods();
     while (true) {
         console.log('1: For Add entry');
         console.log('2: For Delete Entry');
