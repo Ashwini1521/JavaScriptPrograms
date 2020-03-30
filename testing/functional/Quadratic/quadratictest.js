@@ -1,7 +1,7 @@
 const assert = require('chai').assert; //assert to determine the status of the failure
 const callfunction = require('./quadraticBl');
 
-describe('get if callfunction add.js', () => { //holds collection of test
+describe('get if callfunction quadraticBl.js', () => { //holds collection of test
     
     it("should not be null", () => {
         assert.isNotNull(callfunction.findQuadratic(), false);
