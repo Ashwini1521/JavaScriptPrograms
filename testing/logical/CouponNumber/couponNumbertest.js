@@ -1,5 +1,5 @@
 const assert = require('chai').assert; //assert to determine the status of the failure
-const callfunction = require('./add.js');
+const callfunction = require('./couponNumberBl');
 describe('get if callfunction generates coupon number or not from couponNumberBl.js', () => { //holds collection of test
    
     it("should not be negative", () => { //it() is the test itself
