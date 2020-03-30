@@ -1,9 +1,9 @@
 const assert = require('chai').assert; //assert to determine the status of the failure
-const callfunction = require('./add.js');
+const callfunction = require('./distanceBl');
 
-describe('get if callfunction add.js', () => { //holds collection of test
+describe('get if callfunction distanceBl.js', () => { //holds collection of test
     
-    it("should not be null", () => {
+    it("should not be null", () => { //it calls itself
         assert.isNotNull(callfunction.distance(), false);
     });
     it("should not be character", () => {
