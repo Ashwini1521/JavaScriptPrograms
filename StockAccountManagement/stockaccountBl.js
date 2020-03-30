@@ -3,7 +3,7 @@ const read = require('readline-sync');
 /**
 * @module Stock
 */
-class Stock {
+class stock {
     constructor(name, NoOfstock, price) {
         this.name = name;
         this.NoOfstock = NoOfstock;
